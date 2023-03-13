@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: #fdfdfd;
+    --text-color: #333;
+    --main-color: #754ef9;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0,0,0,.2)
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color)
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: yellowgreen;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: default;
+    margin-right: auto;
+}
+
+#nav-menu a{
+    position: relative;
+    font-size: 1.7rem;
+    color: var(--white-color);
+    font-weight: 500;
+    margin-right: 3.5rem;
+}
+
+#nav-menu a.active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: .2rem;
+    background: var(--white-color);
+}
+
+#darkMode-icon {
+    font-size: 2.4rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
