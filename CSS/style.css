@@ -129,7 +129,7 @@ section{
     align-items: center;
     justify-content: center;
 }
-.resume-button-1{
+#resume-button-1, #resume-button-2{
     display: inline-block;
     padding: 12px 28px;
     margin-top: 20px;
@@ -141,21 +141,7 @@ section{
     font-weight: 600;
     transition: all .45s ease;
 }
-.resume-button-1:hover{
-    transform: scale(0.9);
-}
-.resume-button-2{
-    display: inline-block;
-    padding: 12px 28px;
-    background: var(--main-color);
-    border-radius: 5px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-}
-.resume-button-2:hover{
+#resume-button-1:hover, #resume-button-2:hover{
     transform: scale(0.9);
 }
 #res{
@@ -229,7 +215,7 @@ header.sticky{
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
-#skills-card{
+#skills{
     background: var(--second-bg-color);
 }
 .main-text{
