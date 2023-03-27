@@ -72,7 +72,7 @@ span{
 section{
     padding: 160px 15% 120px;
 }
-.home{
+#home{
     position: relative;
     height: 100vh;
     width: 100%;
@@ -158,6 +158,17 @@ section{
 .resume-button-2:hover{
     transform: scale(0.9);
 }
+#res{
+    display: inline-block;
+    padding: 4px 20px;
+    background: var(--main-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all .45s ease;
+}
 /* .resume-button-2{
     display: inline-flex;
     align-items: center;
@@ -218,7 +229,7 @@ header.sticky{
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
-.skills-card{
+#skills-card{
     background: var(--second-bg-color);
 }
 .main-text{
@@ -235,22 +246,24 @@ header.sticky{
 }
 .skills-card-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-    align-items: center;
-    gap: 2.5rem;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-rows: repeat(100px); */
+    /* align-items: center; */
+    gap: 1rem;
     margin-top: 5rem;
+    /* border: 1px solid white; */
 }
 .box{
-    background: var(--bg-color);
-    padding: 35px 45px;
-    border-radius: 8px;
+    background: black;
+    border-radius: 10px;
     transition: all .45s ease;
+    border: 1px solid white;
 }
-.skills-card-img i{
-    font-size: 32px;
-    margin-bottom: 20px;
+.box img{
+    width: 100%;
+    border-radius: 10px;
 }
-.box h3{
+/* .box h3{
     font-size: 24px;
     font-weight: 600;
     color: var(--text-color);
@@ -261,7 +274,7 @@ header.sticky{
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 25px;
-}
+} */
 .read{
     display: inline-block;
     padding: 8px 18px;
@@ -288,6 +301,11 @@ header.sticky{
     gap: 2.5rem;
     margin-top: 5rem;
 }
+.project-flex{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
 .rows{
     position: relative;
     overflow: hidden;
@@ -303,7 +321,7 @@ header.sticky{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.1), #fe2323);
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -325,6 +343,7 @@ header.sticky{
 .layer p{
     color: var(--second-color);
     font-size: 1rem;
+    font-weight: 600;
     line-height: 1.8;
 }
 .layer i{
@@ -345,7 +364,7 @@ header.sticky{
 .rows:hover .layer{
     height: 100%;
 }
-.contact{
+#contact{
     background: var(--second-bg-color);
     display: grid;
     grid-template-columns: repeat(2,1fr);
