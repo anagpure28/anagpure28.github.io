@@ -323,8 +323,9 @@ header.sticky{
 }
 .layer h5{
     font-size: 20px;
-    font-weight: 600;
+    font-weight:bolder;
     margin-bottom: 15px;
+    color: black;
 }
 .layer p{
     color: var(--second-color);
