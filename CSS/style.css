@@ -465,7 +465,7 @@ header.sticky{
     /* padding-top: 20px; */
     border: 1px solid red;
 }
-.calender{
+.react-activity-calendar{
     width: 100%;
     height: 300px;
     border: 1px solid white;
@@ -474,7 +474,7 @@ header.sticky{
     display: flex;
     margin-top: 20px;
 }
-.react-activity-calendar{
+.calendar{
     margin: auto;
     width: 100%;
 }
