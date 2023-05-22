@@ -261,6 +261,45 @@ header.sticky{
     width: 100%;
     border-radius: 10px;
 }
+/* #tech-cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+} */
+.skills-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .skills-container .skills-card-1 {
+    flex: 1 1 1rem;
+    background: black;
+    padding: 1rem 1rem 1rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .1rem solid var(--text-color);
+    transition: .5s ease;
+  }
+  .skills-container .skills-card-1:hover {
+    border-color: gold;
+    transform: scale(1.02);
+  } 
+  .skills-card-1 i {
+    font-size: 3rem;
+    color: var(--main-color);
+  }
+  .skills-card-1 h3 {
+    font-size: 1.8rem;
+  }
+  .skills-card-1 p {
+    font-size: 1.1rem;
+    margin: 1rem 0 3rem;
+  }
 /* .box h3{
     font-size: 24px;
     font-weight: 600;
@@ -319,7 +358,7 @@ header.sticky{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1), #fe2323);
+    background: linear-gradient(rgba(0,0,0,0.1), #fe3d3d);
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -368,9 +407,16 @@ header.sticky{
     /* display: grid;
     grid-template-columns: repeat(2,1fr); */
     /* align-items: center; */
-    width: 60%;
-    margin: auto;
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     gap: 2.5rem;
+}
+.contact-text{
+    width: 40%;
+   margin: auto;
+   text-align: justify;
 }
 .contact-text h4{
     color: var(--text-color);
