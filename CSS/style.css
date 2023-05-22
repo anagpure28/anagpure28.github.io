@@ -440,7 +440,7 @@ header.sticky{
     cursor: pointer;
 } */
 .end{
-    padding: 20px 85%;
+    padding: 20px 12%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
