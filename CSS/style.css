@@ -144,7 +144,7 @@ section{
 #resume-button-1:hover, #resume-button-2:hover{
     transform: scale(0.9);
 }
-#res{
+#resume-link-1{
     display: inline-block;
     padding: 4px 20px;
     background: var(--main-color);
