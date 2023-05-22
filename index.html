@@ -18,18 +18,18 @@
         <a href="#" class="logo">Port<span>fo</span>lio.</a>
 
         <ul id="nav-menu">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a class="nav-link home" href="#home" class="active">Home</a></li>
+            <li><a class="nav-link about" href="#about">About</a></li>
+            <li><a class="nav-link skills" href="#skills">Skills</a></li>
+            <li><a class="nav-link projects" href="#projects">Projects</a></li>
+            <li><a class="nav-link contact" href="#contact">Contact</a></li>
             <li><a href="Aniket-Nagpure-Resume.pdf" class="nav-link resume" id="res" download>Resume</a></li>
             <div class="bx bx-menu" id="menu-icon"></div>
         </ul>
     </header>
 
     <!-- Home Design -->
-    <section class="nav-link home" id="home">
+    <section id="home">
         <div class="home-text">
             <div class="slide">
                 <span class="one">Hello</span>
@@ -44,23 +44,22 @@
                 <a href="#"><i class='bx bx-phone-call'></i></a>
                 <a href="https://mail.google.com/"><i class='bx bxl-gmail'></i></a>
             </div>
-            <div class="button">
-                <a href="Aniket-Nagpure-Resume.pdf" id="resume-button-1" download>Download Resume</a>
+            <div class="button" id="resume-button-1">
+                <a href="Aniket-Nagpure-Resume.pdf" style="color: white" download>Download Resume</a>
             </div>
         </div>
         <div style="margin-left: 50px;">
             <img src="./Img/ProfilePhoto.png" alt="">
         </div>
     </section>
-    <!-- id="about-img" -->
-    <!-- id="about-text" -->
+
     <!-- About section Design -->
-    <section class="nav-link about" id="about">
-        <div class="about">
+    <section id="about">
+        <div id="about-img">
             <img src="Img/Photo2.jpg" class="home-img" alt="" width="300px" >
         </div>
 
-        <div class="section">
+        <div id="about-text">
             <h2>About <span>Me</span></h2>
             <h3>Full Stack Developer</h3>
             <p id="user-detail-intro">An enthusiastic Full Stack Developer, a lifelong learner, skilled in front-end Web Development. High
@@ -68,14 +67,14 @@
                 knowledge and build premium websites while facilitating the organization in achieving functional
                 goals.
             </p>
-            <div class="button">
-                <a href="Aniket-Nagpure-Resume.pdf" id="resume-button-2" download>Download Resume</a>
+            <div class="button" id="resume-button-2">
+                <a href="Aniket-Nagpure-Resume.pdf" style="color: white" download>Download Resume</a>
             </div>
         </div>
     </section>
 
     <!-- skills-card section Design -->
-    <section class="nav-link skills" id="skills">
+    <section id="skills">
         <div class="main-text">
             <p>What I am Expert In</p>
             <h2><span>My</span> Skills</h2>
@@ -103,7 +102,7 @@
     </section>
 
     <!-- projects Section Design -->
-    <section class="nav-link projects" id="projects">
+    <section id="projects">
         <div class="main-text">
             <p>Projects</p>
             <h2><span>Latest</span> Project</h2>
@@ -181,7 +180,7 @@
     </section>
 
     <!-- Contact section Design -->
-    <section class="nav-link contact" id="contact">
+    <section id="contact">
         <div class="contact-text">
             <h2>Contact <span>Me!</span></h2>
             <h4>If You Have Any Project In Your Mind.</h4>
@@ -197,7 +196,7 @@
                 <a id="contact-email" href="https://mail.google.com/"><i class='bx bxl-gmail'></i></a>
             </div>
         </div>
-        <div class="contact-form">
+        <!-- <div class="contact-form">
             <form action="">
                 <input type="name" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email Address" required>
@@ -205,7 +204,7 @@
                 <textarea name="" id="" cols="35" rows="10" placeholder="How Can I Help You"></textarea>
                 <input type="submit" value="Send Message" class="submit" required>
             </form>
-        </div>
+        </div> -->
     </section>
 
     <!-- End Section Design -->

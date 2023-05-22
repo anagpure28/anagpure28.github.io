@@ -353,9 +353,11 @@ header.sticky{
 }
 #contact{
     background: black;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr); */
+    /* align-items: center; */
+    width: 60%;
+    margin: auto;
     gap: 2.5rem;
 }
 .contact-text h4{
@@ -407,7 +409,7 @@ header.sticky{
     background: var(--text-color);
     color: var(--main-color);
 }
-.contact-form form{
+/* .contact-form form{
     position: relative;
 }
 .contact-form form input, form textarea{
@@ -436,9 +438,9 @@ header.sticky{
 .contact-form .submit:hover{
     transform: scale(1.1);
     cursor: pointer;
-}
+} */
 .end{
-    padding: 20px 15%;
+    padding: 20px 85%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
