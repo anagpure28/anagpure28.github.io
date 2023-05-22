@@ -129,7 +129,19 @@ section{
     align-items: center;
     justify-content: center;
 }
-#resume-button-1, #resume-button-2{
+#resume-button-1{
+    display: inline-block;
+    padding: 4px 1px;
+    /* margin-top: 10px; */
+    background: var(--main-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all .45s ease;
+}
+#resume-button-2{
     display: inline-block;
     padding: 12px 28px;
     margin-top: 20px;
@@ -144,7 +156,7 @@ section{
 #resume-button-1:hover, #resume-button-2:hover{
     transform: scale(0.9);
 }
-#resume-link-1{
+/* #resume-link-1{
     display: inline-block;
     padding: 4px 20px;
     background: var(--main-color);
@@ -154,7 +166,7 @@ section{
     letter-spacing: 1px;
     font-weight: 600;
     transition: all .45s ease;
-}
+} */
 /* .resume-button-2{
     display: inline-flex;
     align-items: center;
