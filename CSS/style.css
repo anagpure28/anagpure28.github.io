@@ -924,3 +924,37 @@ header img{
         margin-top: 5px;
     }
 }
+#github-sec{
+    height: auto;
+    margin-bottom: 100px;
+}
+
+.github>h1{
+    text-align: center;
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 30px;
+}
+.github>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.calender{
+    width:85%;
+    margin: auto;
+    /* border: 1px solid red; */
+    color:white
+}
+.calender>img{
+    width: 100%;
+}
+.react-activity-calendar{
+}
+.github>div>div{
+    margin: 10px auto;
+}
+.github>div>div>img{
+    margin: 10px;
+}
