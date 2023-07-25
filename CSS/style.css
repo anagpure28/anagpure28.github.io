@@ -251,13 +251,13 @@ header.sticky{
     margin-top: 5rem;
     /* border: 1px solid white; */
 }
-.box{
+#box{
     background: black;
     border-radius: 10px;
     transition: all .45s ease;
     border: 1px solid white;
 }
-.box img{
+#box img{
     width: 100%;
     border-radius: 10px;
 }
@@ -327,7 +327,7 @@ header.sticky{
     background: #ffffff99;
     color: var(--text-color);
 }
-.box:hover{
+#box:hover{
     transform: translate(-8px);
     cursor: pointer;
 }
