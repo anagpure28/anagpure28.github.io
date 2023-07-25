@@ -1,27 +1,11 @@
-
-let menu=document.getElementById("menu-icon");
-let navbar=document.querySelector(".navbar");
-let m=document.querySelector(".main-body")
-let count=0;
-menu.addEventListener('click',()=>{
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('open');
-    
-    m.style.marginTop="200px";
-    count++;
-    if(count%2==0){
-        m.style.marginTop="0px";
-
-    }
-
-    if(m.classList.contains("m-t")){
-        m.classList.remove("m-t");
-    }
-    else{
-        m.classList.add("m-t");
-    }
-});
+const header = document.querySelector("header");
+window.addEventListener("scroll", function() {
+    header.classList.toggle("sticky", window.scrollY > 100)
+})
 
 
-GitHubCalendar(".calendar", "anagpure");
-GitHubCalendar(".calendar", "anagpure", { responsive: true });
+// *=============================== github calender ==================================
+GitHubCalendar(".calendar", "anagpure28");
+
+// or enable responsive functionality:
+GitHubCalendar(".calendar", "anagpure28", { responsive: true });
