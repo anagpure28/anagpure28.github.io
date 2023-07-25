@@ -242,7 +242,7 @@ header.sticky{
     font-size: var(--h2-font);
     line-height: 1;
 }
-.skills-card{
+.skills-card-content{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     /* grid-template-rows: repeat(100px); */
@@ -250,6 +250,14 @@ header.sticky{
     gap: 1rem;
     margin-top: 5rem;
     /* border: 1px solid white; */
+}
+.git-card-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-rows: repeat(100px); */
+    /* align-items: center; */
+    gap: 1rem;
+    margin-top: 5rem;
 }
 #box{
     background: black;
