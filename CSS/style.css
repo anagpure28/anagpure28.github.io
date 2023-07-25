@@ -242,7 +242,7 @@ header.sticky{
     font-size: var(--h2-font);
     line-height: 1;
 }
-.skills-card{
+.skills-card-content{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     /* grid-template-rows: repeat(100px); */
