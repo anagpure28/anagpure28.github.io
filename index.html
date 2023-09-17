@@ -4,291 +4,390 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="https://play-lh.googleusercontent.com/69_YG2leWstfEqXHyW6-2Vyu9TFUNcoqdK-YCxgj624MaFF4ZCPRJSnXnVKns6Hj7w" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <title> Aniket Nagpure | Web Developer</title>
+    <link rel="icon" type="image/x-icon" href="../Media/logo.jpeg">
+    
 </head>
 <body>
 
-    <!-- Header Design -->
-    <header>
-        <a href="#" class="logo">Port<span>fo</span>lio.</a>
 
-        <ul id="nav-menu">
-            <li><a class="nav-link home" href="#home" class="active">Home</a></li>
-            <li><a class="nav-link about" href="#about">About</a></li>
-            <li><a class="nav-link skills" href="#skills">Skills</a></li>
-            <li><a class="nav-link projects" href="#projects">Projects</a></li>
-            <li><a class="nav-link contact" href="#contact">Contact</a></li>
-            <li><div  class="nav-link resume" id="resume-button-1" >
-                <a href="Aniket-Nagpure-Resume.pdf" target="_blank" class="resume" style="color: white" id="resume-link-1" download>Resume</a>
-            </div></li>
-            <!-- <li><a href="Aniket-Nagpure-Resume.pdf" class="nav-link resume" id="resume-link-1" download>Resume</a></li> -->
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </ul>
-    </header>
+  <header>
+    <a href="#" class="logo"><h2>Ritesh <span style="color: black;">Kothawade</span></h2></a>
 
-    <!-- Home Design -->
-    <section id="home">
-        <div class="home-text">
-            <div class="slide">
-                <span class="one">Hello</span>
-                <span class="two">I'm</span>
-            </div>
-            <h1 id="user-detail-name">Aniket Nagpure</h1>
-            <h3>FULL STACK <span>DEVELOPER</span></h3>
-            <p>Dedicated and Efficient Full Stack Developer with an eager to learn new skills. Aims to leverage knowledge, build premium websites and applications.</p>
-            <div class="contact-icons">
-                <a href="https://github.com/anagpure28"><i class='bx bxl-github' ></i></a>
-                <a href="https://www.linkedin.com/in/aniket-nagpure-03aa711b7/"><i class='bx bxl-linkedin' ></i></a>
-                <a href="tel:"><i class='bx bx-phone-call'></i></a>
-                <a href="mailto:aniketnagpure28@gmail.com"><i class='bx bxl-gmail'></i></a>
-            </div>
-            <div class="button" id="resume-button-2">
-                <a href="Aniket-Nagpure-Resume.pdf" target="_blank" style="color: white" id="resume-link-2" class="resume" download>Download Resume</a>
-            </div>
+    <ul id="nav-menu" class="navbar">
+      <li><a href="#" class="active nav-link home">Home</a></li>
+      <li><a href="#about" class="nav-link about section">About</a></li>
+      <li><a href="#skills-sec" class="nav-link skills">Skills</a></li>
+      <li><a href="#projects-sec" class="nav-link projects">Projects</a></li>
+      <li><a href="#contact" class="nav-link contact">Contact</a></li>
+      <li> <button onclick="resume()" style="border:none; background-color: white;" id="resume-button-1" >
+        <a href="Aniket-Nagpure-Resume.pdf" target="_blank" class="nav-link resume" id="resume-link-1" download>Resume</a>
+      </button>
+      </li>
+      <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a> -->
+    </ul>
+    <a href="#" class="logo bx bx-menu" id="menu-icon"><span class="material-symbols-outlined">menu</span></a>
+  </header>
+
+
+<!-- ******************************************************************************************************* -->
+
+
+  <div class="main-container">
+    <section id="home" class="margin-t-b main-body">
+      <div></div>
+      <div id="user-detail-name" class="home-text">
+        <p>Hello, I’m</p>
+        <h1>Aniket Nagpure</h1>
+        <p class="node">FULL STACK WEB DEVELOPER 🤖</p>
+        <div class="home-links">
+          <div class="resume" >
+            <li id="resume-button-2">
+              <a href="Aniket-Nagpure-Resume.pdf" target="_blank" id="resume-link-2" class="button" download>Resume<i class='bx bxs-download'></i></a>
+            </li>
+          </div>
+          <div class="home-social">
+            <a href="https://github.com/anagpure28" id="contact-github" target="_blank">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo5wJDTSaug_z6R_9N2yw9GekcRrkD3A438B8pbDW_PQEzix-SxT16LqvR7unzD4EOwfw&usqp=CAU" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/aniket-nagpure-03aa711b7/" id="contact-linkedin" target="_blank">
+              <img src="https://icons-for-free.com/download-icon-linked+linkedin+social+icon-1320191444164630362_0.svg" alt="">
+            </a>
+          </div>
+          
         </div>
-        <div style="margin-left: 50px;">
-            <img src="./Img/ProfilePhoto.png" alt="">
-        </div>
+  
+      </div>
+  
     </section>
 
-    <!-- About section Design -->
+
+<!-- ***************************************************************************************************** -->
+
+
     <section id="about" class="about section">
-        <div id="about-img">
-            <img src="Img/Photo2.jpg" class="home-img" alt="" width="300px" >
+        <div><img style="padding-left: 20px;"  src="./images/Photo2.jpg" class="home-img" alt="Ritesh">
         </div>
+        <div>
+          <h1>About Me</h1>
+          <p id="user-detail-intro">An enthusiastic Full Stack Developer, a lifelong learner, skilled in front-end Web Development. High
+            adaptability to learn new technologies quickly and pay attention to details. Excellent knowledge of HTML, CSS, JavaScript, ReactJS, Redux, NodeJS, ExpressJS, MongoDB and React Native.
+          </p></p>
+          <a href="#contact">Contact Me</a>
+        </div>
+      </section>
 
-        <div id="about-text" class="about-content">
-            <h2>About <span>Me</span></h2>
-            <h3>Full Stack Developer</h3>
-            <p id="user-detail-intro">An enthusiastic Full Stack Developer, a lifelong learner, skilled in front-end Web Development. High
-                adaptability to learn new technologies quickly and pay attention to details. Aims to leverage
-                knowledge and build premium websites while facilitating the organization in achieving functional
-                goals. Excellent knowledge of HTML, CSS, JavaScript, ReactJS, Redux, NodeJS, ExpressJS, MongoDB and React Native.
-            </p>
-            <!-- <div class="button" id="resume-button-2">
-                <a href="Aniket-Nagpure-Resume.pdf" style="color: white" id="resume-link-2" download>Download Resume</a>
-            </div> -->
-        </div>
+
+
+<!-- **************************************************************************************************** -->
+
+
+
+    <section id="skills-sec">
     </section>
-
-    <!-- skills-card section Design -->
-    <section id="skills" class="skills-card">
-        <div class="main-text">
-            <p>What I am Expert In</p>
-            <h2><span>My</span> Skills</h2>
-        </div>
-        <div class="skills-card-content">
-            <div id="box" class="skills-card-name">
-                <img class="skills-card-img" src="https://p4.wallpaperbetter.com/wallpaper/887/817/276/html-5-html-5-logo-wallpaper-preview.jpg" alt="HTML" width="100%" height="100%">
-            </div>
-            <div id="box" class="skills-card-name">
-                <img class="skills-card-img" src="https://colorlib.com/wp/wp-content/uploads/sites/2/creative-css3-tutorials.jpg" alt="CSS" width="100%" height="100%">
-            </div>
-            <div id="box" class="skills-card-name">
-                <img class="skills-card-img" src="https://repository-images.githubusercontent.com/200666631/0060c080-d060-11ea-9698-98d89d68fc6d" alt="Javascript" width="100%" height="100%">
-            </div>
-            <div id="box" class="skills-card-name">
-                <img class="skills-card-img" src="https://www.jotform.com/blog/wp-content/uploads/2017/01/react-js.png" alt="ReactJS" width="100%" height="100%">
-            </div>
-            <div id="box" class="skills-card-name">
-                <img class="skills-card-img" src="https://www.devteam.space/wp-content/uploads/2021/11/How-to-Build-a-Mobile-App-With-React-Native-660x371.jpg" alt="React Native" width="100%" height="100%">
-            </div>
-            <div id="box" class="skills-card-name">
-                <img class="skills-card-img" src="https://uploads-ssl.webflow.com/635e632477408d12d1811a64/64062c3149536757695aed21_Reduximg.jpeg" alt="Redux" width="100%" height="100%">
-            </div>
-            <div id="box" class="skills-card-name">
-                <img class="skills-card-img" src="https://wallpaperaccess.com/full/5393409.jpg" alt="NodeJS" width="100%" height="100%">
-            </div>
-            <div id="box" class="skills-card-name">
-                <img class="skills-card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGJyTcqahMAvN1Xmn_KHBrzR5lWll39SfvdKugBgydd9aJagpAzyrMsiNHNiss2J-nLPI&usqp=CAU" alt="ExpressJS" width="100%" height="100%">
-            </div>
-            <div id="box" class="skills-card-name">
-                <img class="skills-card-img" src="https://www.howtogeek.com/wp-content/uploads/csit/2021/07/f5932bc2.jpg?width=398&trim=1,1&bg-color=000&pad=1,1" alt="MongoDb" width="100%" height="100%">
-            </div>
-        </div>
-
-        <div class="skills-container" id="tech-cards">
-            <div class="skills-card-1">
-              <i class='bx bx-code-alt' class="skills-card-img"></i>
-              <h3 class="skills-card-name">Full Stack Development</h3>
-              <p>HTML | CSS | JavaScript | ReactJS | NodeJS | Express | MongoDB</p>
-              <a href="#" style="color: #ff4d05" class="button">Read More</a>
-            </div>
-            <div class="skills-card-1">
-              <i class='bx bxl-codepen' class="skills-card-img"></i>
-              <h3 class="skills-card-name">Data Structure Algorithm</h3>
-              <p> Array | String | Two Pointer | Stack | Queue |
-                Sorting </p>
-              <a href="#" style="color: #ff4d05" class="button">Read More</a>
-            </div>
-          </div>   
-    </section>
-
-    <!-- projects Section Design -->
-    <section class="project" id="projects">
-        <div class="main-text">
-            <p>Projects</p>
-            <h2><span>Latest</span> Project</h2>
-        </div>
-        <div class="projects-content">
-            <div class="rows project-card">
-                <img class="home-img" src="https://user-images.githubusercontent.com/92313981/257917011-f7950c16-aeab-4ea0-9b48-03808cc35cc3.png" alt=""/>    
-                <div class="layer">
-                    <h4 class="project-title">InterviewAuto</h4>
-                    <p class="project-description">This is openAi powered interview site where user can join and take in interview on the topic of their choice.</p>
-                    <p class="project-tech-stack">Tech Stacks: HTML | CSS | Javascript | ReactJS | Tailwind CSS | Nodejs | ExpressJS | MongoDB</p>
-                    <div class="project-flex">
-                        <a class="project-github-link" href="https://github.com/anagpure28/InterviewAuto" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a class="project-deployed-link" href="front-end-anagpure28.vercel.app/" target="_blank"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>    
-            </div>
-            <div class="rows project-card">
-                <img class="home-img" src="https://camo.githubusercontent.com/0c3855549ca904491173edc0173e6eb3eb037584310c0ab14073c00605f865d0/68747470733a2f2f692e706f7374696d672e63632f6e7a6a56547a67582f53637265656e73686f742d323032332d30372d32342d3138313030372e706e67" alt=""/>    
-                <div class="layer">
-                    <h4 class="project-title">Spicy-Hall</h4>
-                    <p class="project-description">Spicy Hall is basically a place where all foodies can share and access popular recipes across the country.</p>
-                    <p class="project-tech-stack">Tech Stacks: HTML | CSS | JavaScript | ReactJS | Redux | NodeJS |
-                        MongoDB | ExpressJS</p>
-                    <div class="project-flex">
-                        <a class="project-github-link" href="https://github.com/anagpure28/-adjoining-steel-5186" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a class="project-deployed-link" href="https://tesstt-rohit1438.vercel.app/" target="_blank"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>    
-            </div>
-            <div class="rows project-card">
-                <img class="home-img" src="Img/recipe.png" alt=""/>    
-                <div class="layer">
-                    <h4 class="project-title">Recipe-fit</h4>
-                    <p class="project-description">Recipe fit helps users to save recipes and gives info about
-                        various types of recipes with high protein, carbs</p>
-                    <p class="project-tech-stack">Tech Stack: HTML | CSS | JavaScript | ReactJS | Redux | NodeJS |
-                        MongoDB | ExpressJS</p>
-                    <div class="project-flex">
-                        <a class="project-github-link" href="https://github.com/anagpure28/-sleek-circle-8356-fe" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a class="project-deployed-link" href="https://recipe-fit.netlify.app" target="_blank"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>    
-            </div>
-            <div class="rows project-card">
-                <img class="home-img" src="Img/tata1mg.png" alt=""/>    
-                <div class="layer">
-                    <h4 class="project-title">tata1mg (Clone)</h4>
-                    <p class="project-description">Clone of top Pharmaceutical Brand Tata1mg which provides medicines and tips related to health</p>
-                    <p class="project-tech-stack">Tech Stacks: HTML | CSS | Javascript | ReactJS | Redux | Chakra UI</p>
-                    <div class="project-flex">
-                        <a class="project-github-link" href="https://github.com/anagpure28/tata1mg-Clone" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a class="project-deployed-link" href="https://medzplus.vercel.app/" target="_blank"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>    
-            </div>
-            <div class="rows project-card">
-                <img class="home-img" src="Img/recovery.png" alt=""/>    
-                <div class="layer">
-                    <h4 class="project-title">Recovery - Blogs on Mental Health</h4>
-                    <p class="project-description">A web application that provides educational content and resources
-                        related to mental health. </p>
-                    <p class="project-tech-stack">Tech Stacks: HTML | CSS | Javascript | ReactJS | Redux | Chakra UI</p>
-                    <div class="project-flex">
-                        <a class="project-github-link" href="https://github.com/anagpure28/adhesive-caption-1992/" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a class="project-deployed-link" href="https://imind.vercel.app/" target="_blank"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>    
-            </div>
-            <div class="rows project-card">
-                <img class="home-img" src="Img/ProjectPhoto.png" alt=""/>    
-                <div class="layer">
-                    <h4 class="project-title">DollarTree (Clone)</h4>
-                    <p class="project-description">ON-Basket is a online store for daily needs with season related trending thing</p>
-                    <p class="project-tech-stack">Tech Stacks: HTML | CSS | Javascript</p>
-                    <div class="project-flex">
-                        <a class="project-github-link" href="https://github.com/anagpure28/eager-structure-3963/" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a class="project-deployed-link" href="https://glittering-cannoli-4f8403.netlify.app/" target="_blank"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>    
-            </div>
-            <div class="rows project-card">
-                <img class="home-img" src="Img/fruitstore.png" alt=""/>    
-                <div class="layer">
-                    <h4 class="project-title">FruitStore App</h4>
-                    <p class="project-description">FruitStore application which provides fresh fruits and good user
-                        experience</p>
-                    <p class="project-tech-stack">Tech Stack: React Native | Expo</p>
-                    <div class="project-flex">
-                        <a class="project-github-link" href="https://github.com/anagpure28/FruitStore/" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a class="project-deployed-link" href="https://drive.google.com/file/d/1iS1x9hu5_7lZi3NgArdjcRgS36fqXr9X/view?usp=sharing" target="_blank"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>    
-            </div>
-            <div class="rows project-card">
-                <img class="home-img" src="Img/helpmate.png" alt=""/>    
-                <div class="layer">
-                    <h4 class="project-title">Helpmate - Labour Booking app</h4>
-                    <p class="project-description">Helpmate helps customers to skilled book labour at resonable
-                        price</p>
-                    <p class="project-tech-stack">Tech Stack: React Native | Expo</p>
-                    <div class="project-flex">
-                        <a class="project-github-link" href="https://github.com/anagpure28/Helpmate/" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a class="project-deployed-link" href="https://drive.google.com/file/d/1qb00MZLW5cT04h4w1e6WTYSjfJQXjdXr/view?usp=sharing" target="_blank"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>    
-            </div>            
-        </div>
-    </section>
-
-    <section class="github" id="github">
-        <div class="main-text">
-            <h2>GIT<span>-HUB</span></h2>
-        </div>
-        <div class="git-card-content">
-            <div class="box" style="background-color: black;">
-                <img id="github-streak-stats" src="https://github-readme-streak-stats.herokuapp.com/?user=anagpure28&theme=black-ice&hide_border=true&stroke=0000&background=060A0CD0&hide_border=false" alt="" width="100%" height="100%">
-            </div>
-            <div class="box" style="background-color: black;">
-                <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=anagpure28&show_icons=true&bg_color=000000" alt="" width="100%" height="100%">
-            </div>
-            <div class="box" style="background-color: black;">
-                <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anagpure28&bg_color=000000&hide_border=true" alt="" width="100%" height="100%">
-            </div>
-        </div>
-        <div class="react-activity-calendar">
-            <img class="calendar" src="Img/git2.png" alt="">
-        </div>
-    </section>
-
-    <!-- Contact section Design -->
-    <section id="contact">
-        <div class="contact-text">
-            <h2>Contact <span>Me!</span></h2>
-            <h4>If You Have Any Project In Your Mind.</h4>
-            <p>I'm a Web Developer - creating interactive and smooth interface designs for companies all across the world.</p>
-            <div class="list">
-                <li id="contact-phone"><a href="tel:"><span>Mobile:</span> 9209216409</a></li>
-                <li id="contact-email"><a href="mailto:aniketnagpure28@gmail.com"><span>Email: </span> aniketnagpure28@gmail.com</a></li>
-            </div>
-            <div class="contact-icons">
-                <a id="contact-github" href="https://github.com/anagpure28"><i class='bx bxl-github' ></i></a>
-                <a id="contact-linkedin" href="https://www.linkedin.com/in/aniket-nagpure-03aa711b7/"><i class='bx bxl-linkedin' ></i></a>
-                <a id="contact-phone" href="#"><i class='bx bx-phone-call'></i></a>
-                <a id="contact-email" href="https://mail.google.com/"><i class='bx bxl-gmail'></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- End Section Design -->
-    <div class="end">
-        <div class="top">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-        </div>
-    </div>
-
-    <!-- custom js link -->
-    <script type="text/javascript"  src="Js/script.js"></script>
     
+    <section id="skills">
+      <h1>Technical Skills</h1>
+      <div class="skills-card" id="tech-stack">
+        <div class="container grid" id="tech">
+        <div> 
+          <img class="skills-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/800px-HTML5_Badge.svg.png" alt="HTML"><p class="skills-card-name">HTML</p>
+        </div>
+        <div>
+          <img class="skills-card-img" src="https://camo.githubusercontent.com/edc736634dd35b0f4008e2f7db456136b9fc0e1e7a4078bb72c7352b1bdf8a7e/68747470733a2f2f776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6373732d332e737667">CSS</p>
+        </div>
+        <div>
+          <img class="skills-card-img" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"><p class="skills-card-name">JavaScript</p>
+        </div>
+        
+        <div>
+          <img class="skills-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="React.js"><p class="skills-card-name">ReactJS</p>
+        </div>
+        <div>
+          <img class="skills-card-img" src="https://cdn.worldvectorlogo.com/logos/redux.svg" alt="Redux"><p class="skills-card-name">Redux</p>
+        </div>
+        <div>
+          <img class="skills-card-img" src="https://www.nicepng.com/png/detail/31-315310_react-hexagon-react-js-transparent-background.png" alt="React Native"><p class="skills-card-name">React Native</p>
+        </div>
+        <div>
+          <img class="skills-card-img" src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" alt="Node.js"><p class="skills-card-name">Node.js</p>
+        </div>
+        <div>
+          <img class="skills-card-img" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png" alt="Express.js"><p class="skills-card-name">Express.js</p>
+        </div>
+        <div>
+          <img class="skills-card-img" src="https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Emblem.jpg" alt="MongoDB"><p class="skills-card-name">MongoDB</p>
+        </div>
+        <div>
+          <img class="skills-card-img" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"><p class="skills-card-name">GitHub</p>
+        </div>
+        <div> 
+          <img class="skills-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code"><p class="skills-card-name">VS Code</p>
+        </div>
+        <div> 
+            <img class="skills-card-img" src="https://ph-files.imgix.net/3f458a19-f754-4e09-8aa5-351c3a45dc38.png?auto=format" alt="Thunder Client"><p class="skills-card-name">Thunder Client</p>
+        </div>
+  </div>
+</section>
+
+
+
+<!-- ******************************************************************************************************* -->
+
+
+
+    <section id="projects-sec">
+    </section>
+    <section id="projects">
+      <h1>Projects</h1>
+      <div class="all-projects">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://user-images.githubusercontent.com/92313981/257917011-f7950c16-aeab-4ea0-9b48-03808cc35cc3.png" alt="">
+          </div>
+          <div class="project-desc">
+            <h1 class="project-title" >InterviewAuto</h1>
+            <p class="project-description">This is openAi powered interview site where user can join and take in interview on the topic of their choice.</p>
+            <h5  class="project-tech-stack" >Features: Sign-in/Register | Interview Panel | Language Selection | Feedback Section.</h5>
+            <h5  class="project-tech-stack" >Tech Stacks: HTML | CSS | Javascript | ReactJS | Tailwind CSS | Nodejs | ExpressJS | MongoDB</h5>
+            <p>Completed a Collabrative project within a span of 2 days.</p>
+            <div class="deploy-links">
+              <a href="https://front-end-anagpure28.vercel.app/" target="_blank" class="project-deployed-link">Live &nbsp;<i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
+              <a href="https://github.com/anagpure28/InterviewAuto" target="_blank" class="project-github-link" >Code &nbsp;<i
+                class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+       </div>
+
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://camo.githubusercontent.com/0c3855549ca904491173edc0173e6eb3eb037584310c0ab14073c00605f865d0/68747470733a2f2f692e706f7374696d672e63632f6e7a6a56547a67582f53637265656e73686f742d323032332d30372d32342d3138313030372e706e67" alt="">
+          </div>
+          <div class="project-desc">
+            <h1 class="project-title" >Spicy-Hall</h1>
+            <p class="project-description">Spicy Hall is basically a place where all foodies can share and access popular recipes across the country.</p>
+            <h5  class="project-tech-stack" >Features: Sign-in/Register | Recipe Page | Like, Comment, save & Post Recipe</h5>
+            <h5  class="project-tech-stack" >Tech Stacks: HTML | CSS | JavaScript | ReactJS | Redux | NodeJS |
+                MongoDB | ExpressJS</h5>
+            <p>Completed a Collabrative project within a span of 3 days.</p>
+            <div class="deploy-links">
+              <a href="https://tesstt-rohit1438.vercel.app/" target="_blank" class="project-deployed-link">Live &nbsp;<i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
+              <a href="https://github.com/anagpure28/-adjoining-steel-5186" target="_blank" class="project-github-link" >Code &nbsp;<i
+                class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+       </div>
+
+       <div class="project-card">
+        <div class="project-img">
+          <img src="./images/recipe.png" alt="">
+        </div>
+        <div class="project-desc">
+          <h1 class="project-title" >Recipe-fit</h1>
+          <p class="project-description">Recipe fit helps users to save recipes and gives info about
+            various types of recipes with high protein, carbs</p>
+          <h5  class="project-tech-stack" >Features:
+              Sign-in/Register | Recipe Page with all functionality | Save Recipe | Admin Panel</h5>
+          <h5  class="project-tech-stack" >Tech Stack: HTML | CSS | JavaScript | ReactJS | Redux | NodeJS |
+            MongoDB | ExpressJS</h5>
+          <p>Completed a Collabrative project within a span of 3 days.</p>
+          <div class="deploy-links">
+            <a href="https://recipe-fit.netlify.app" target="_blank" class="project-deployed-link">Live &nbsp;<i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
+            <a href="https://github.com/anagpure28/-sleek-circle-8356-fe" target="_blank" class="project-github-link" >Code &nbsp;<i
+              class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+          <div class="project-img">
+            <img src="./images/tata1mg.png" alt="">
+          </div>
+          <div class="project-desc">
+            <h1 class="project-title" >tata1mg (Clone)<br></h1>
+            <p class="project-description">Clone of top Pharmaceutical Brand Tata1mg which provides medicines and tips related to health</p>
+            <h5  class="project-tech-stack" >Features:
+                Register/Sign-in | Products Page with all functionality | Checkout Page | Admin Page</h5>
+            <h5  class="project-tech-stack" >Tech Stacks: HTML | CSS | Javascript | ReactJS | Redux | Chakra UI</h5>
+            <p>Completed a Collabrative project within a span of five days.</p>
+            <div class="deploy-links">
+              <a href="https://medzplus.vercel.app/" target="_blank" class="project-deployed-link">Live &nbsp;<i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
+              <a href="https://github.com/anagpure28/tata1mg-Clone" target="_blank" class="project-github-link" >Code &nbsp;<i
+                class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./images/recovery.png" alt="">
+          </div>
+          <div class="project-desc">
+            <h1 class="project-title" >Recovery - Blogs on Mental Health<br></h1>
+            <p class="project-description">A web application that provides educational content and resources
+                related to mental health.</p>
+            <h5  class="project-tech-stack" >Features:
+                Home Page | Nature Page | Blogs Page | Admin Panel</h5>
+            <h5  class="project-tech-stack" >Tech Stacks: HTML | CSS | Javascript | ReactJS | Redux | Chakra UI</h5>
+            <p>Completed a Collabrative project within a span of 3 days.</p>
+            <div class="deploy-links">
+              <a href="https://imind.vercel.app/" target="_blank" class="project-deployed-link">Live &nbsp;<i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
+              <a href="https://github.com/anagpure28/adhesive-caption-1992/" target="_blank" class="project-github-link" >Code &nbsp;<i
+                class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+            <div class="project-img">
+              <img src="./images/ProjectPhoto.png" alt="">
+            </div>
+            <div class="project-desc">
+              <h1 class="project-title" >DollarTree (Clone)<br></h1>
+              <p class="project-description">ON-Basket is a online store for daily needs with season related trending thing</p>
+              <h5  class="project-tech-stack" >Features: Sign-in/Register | Home Page | Products Page | Checkout Page | Admin Page</h5>
+              <h5  class="project-tech-stack" >Tech Stack: HTML | CSS | Javascript</h5>
+              <p>Completed a Collabrative project within a span of 5 days.</p>
+              <div class="deploy-links">
+                <a href="https://glittering-cannoli-4f8403.netlify.app/" target="_blank" class="project-deployed-link">Live &nbsp;<i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
+                <a href="https://github.com/anagpure28/eager-structure-3963/" target="_blank" class="project-github-link" >Code &nbsp;<i
+                  class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+            <div class="project-img">
+              <img src="./images/fruitstore.png" alt="">
+            </div>
+            <div class="project-desc">
+              <h1 class="project-title" >FruitStore App (React Native)<br></h1>
+              <p class="project-description">FruitStore application which provides fresh fruits and good user
+                experience</p>
+              <h5  class="project-tech-stack" >Features: Sign-in/Register | Home Page | Fruits Page | Checkout Page | Payment Page</h5>
+              <h5  class="project-tech-stack" >Tech Stack: HTML | CSS | Javascript | React Native | Expo</h5>
+              <p>Completed an individual project within a span of 15 days.</p>
+              <div class="deploy-links">
+                <a href="https://drive.google.com/file/d/1iS1x9hu5_7lZi3NgArdjcRgS36fqXr9X/view?usp=sharing" target="_blank" class="project-deployed-link">Live &nbsp;<i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
+                <a href="https://github.com/anagpure28/FruitStore/" target="_blank" class="project-github-link" >Code &nbsp;<i
+                  class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+            <div class="project-img">
+              <img src="./images/helpmate.png" alt="">
+            </div>
+            <div class="project-desc">
+              <h1 class="project-title" >Helpmate - Labour Booking app<br></h1>
+              <p class="project-description">Helpmate helps customers to skilled book labour at resonable
+                price</p>
+              <h5  class="project-tech-stack" >Features: Sign-in/Register | Home Page | Category Page | Profile Page | Payment Page</h5>
+              <h5  class="project-tech-stack" >Tech Stack: HTML | CSS | Javascript | React Native | Expo</h5>
+              <p>Completed an individual project within a span of 15 days.</p>
+              <div class="deploy-links">
+                <a href="https://drive.google.com/file/d/1qb00MZLW5cT04h4w1e6WTYSjfJQXjdXr/view?usp=sharing" target="_blank" class="project-deployed-link">Live &nbsp;<i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
+                <a href="https://github.com/anagpure28/Helpmate/" target="_blank" class="project-github-link" >Code &nbsp;<i
+                  class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>  
+    </section>
+
+
+
+    <!-- ***************************************************************************************************** -->
+
+
+
+    <section id="github-sec">
+        <div class="github react-activity-calendar">
+          <h1>GitHub Statistics</h1>
+          <div>
+            <img class="calendar" src="/images/git2.png" alt="">
+              <div>
+                <a href="https://github.com/anagpure28" target="_blank"><img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=anagpure28&show_icons=true&theme=gotham"></a>
+                  
+                <a href="https://github.com/anagpure28" target="_blank"><img  id="github-streak-stats" src="https://github-readme-streak-stats.herokuapp.com?user=anagpure28&theme=gotham&hide_border=false"></a>
+              </div>
+              <div>
+                <a href="https://github.com/anagpure28" target="_blank"><img id="github-top-langs"src="https://github-readme-stats.vercel.app/api/top-langs/?username=anagpure28&layout=compact&theme=gotham"></a>
+              </div>      
+          </div>
+         </div>
+      </section>
+
+
+
+<!-- *************************************************************************************************** -->
+
+
+
+    <section id="contact-sec" class="contact-section"></section>
+    <section id="contact">
+      <div class="ccc1">
+        <h1 class="section-title">Contact</h1>
+      </div>
+      <div class="ccc2">
+        
+          <div id="contact-link" class="contact-link">   
+              <div>
+                <h1 style="margin: 10px auto;text-align: center;color:black;margin-top: 10px;">Get in touch with me</h1>
+                  <a target="_blank" id="contact-github"
+                      href="https://github.com/anagpure28">
+                      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""> 
+                      <span> Github</span>
+                  </a>
+                  <a target="_blank" id="contact-linkedin"
+                      href="https://www.linkedin.com/in/aniket-nagpure-03aa711b7/">
+                      <img src="https://www.iconpacks.net/icons/1/free-linkedin-icon-112-thumb.png" alt=""> <span> LinkedIn</span>
+                  </a>
+                  <a target="_blank" id="contact-phone" href="tel:+919209216409">
+                    <img src="https://static.vecteezy.com/system/resources/previews/010/829/986/original/phone-icon-in-trendy-flat-style-free-png.png" alt=""> <span>  +91 9970609200</span>
+                  </a>
+                  <a target="_blank" id="contact-email"
+                     href="mailto:aniketnagpureofficial@gmail.com"><img  src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-email-512.png"alt=""> <span> kothawaderitesh2010@gmail.com</span>
+                  </a>
+              </div>
+          </div>
+         
+          <div class="contact-form">
+            
+            <form onsubmit="sendEmail(); reset(); return false;">
+              <h1 style="margin: auto;text-align: center;color:white;margin-bottom: 10px;">You can also reach out me!</h1>
+              <input type="text" id="name" placeholder="Your Name" required><br>
+              <input type="email" id="email" placeholder="Your Email Address" required><br>
+              <input type="number" id="phone" placeholder="Your Mobile Number" required><br>
+              <textarea type="text" id="message" cols="35" rows="5" style="padding: 5px;" placeholder="How Can I Help You"></textarea><br>
+              <input type="submit" value="Send Message" class="submit" required>
+            </form>
+          </div>
+      </div>
+      <div class="end">
+        <div class="top" style="display: flex;justify-content: space-between;">
+            <a href="#home"><button>Home</button></i></a>
+            <footer style="margin: 10px;margin-left: 50px;">
+              <div class="footer">
+                <span>© 2023 Aniket Nagpure. All Rights Reserved.
+                </span>
+              </div>
+            </footer>
+        </div>
+      </div>
+    </section>
+
+
+    
+
+</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
