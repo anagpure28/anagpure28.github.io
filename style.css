@@ -131,9 +131,9 @@ header img{
     font-weight: 700;
     color:teal;
 }
-/* .resume1{
+.resume{
     margin: 20px 0px;
-} */
+}
 #resume-button-2{
     background: linear-gradient(134deg,teal 0%, teal 99%);
     color: white;
