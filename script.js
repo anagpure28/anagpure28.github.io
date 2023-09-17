@@ -5,7 +5,7 @@ window.addEventListener("scroll", function() {
 
 
 // *=============================== github calender ==================================
-GitHubCalendar(".calendar", "anagpure28");
+// GitHubCalendar(".calendar", "anagpure28");
 
-// or enable responsive functionality:
-GitHubCalendar(".calendar", "anagpure28", { responsive: true });
+// // or enable responsive functionality:
+// GitHubCalendar(".calendar", "anagpure28", { responsive: true });
