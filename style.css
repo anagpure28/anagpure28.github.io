@@ -291,6 +291,9 @@ header img{
     border-radius:10px ;
     color:#ECE9E6
 }
+.calendar > img{
+    width: 100%;
+}
 .github>div>div{
     margin: 10px auto;
 }
