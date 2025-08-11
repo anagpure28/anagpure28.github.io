@@ -408,8 +408,8 @@ const Portfolio = () => {
                 item === 'Resume' ? (
                   <a
                     key={item}
-                    href="/Resume_Aniket_Nagpure.pdf" 
-                    download="Resume_Aniket_Nagpure.pdf"
+                    href="/Aniket-Nagpure-Resume.pdf" 
+                    download="Aniket-Nagpure-Resume.pdf"
                     className="cursor-pointer capitalize transition-all duration-300 hover:text-blue-400 text-white"
                   >
                     {item}
