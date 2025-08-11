@@ -9,8 +9,8 @@ import Certificate from './assets/Certificate.png';
 import Quiz from './assets/Quiz.png';
 import InterviewAuto from './assets/InterviewAuto.png';
 import NoteApplication from './assets/NoteApplication.png';
-import Fruit from './assets/FruitStore.png';
 import Helpmate from './assets/helpmate.png';
+import Fruit from './assets/Fruit.png';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
