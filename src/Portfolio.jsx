@@ -349,7 +349,7 @@ const Portfolio = () => {
     },
     {
       id: 9,
-      title: 'FruitStore',
+      title: 'FruitStore App',
       summary: 'Fresh fruits delivered to your doorstep—fast, easy, and delicious.',
       image: `${Fruit}`,
       techStack: ['HTML', 'CSS', 'Javascript', 'React Native', 'Expo'],
@@ -358,7 +358,7 @@ const Portfolio = () => {
     },
     {
       id: 10,
-      title: 'Helpmate',
+      title: 'Helpmate App',
       summary: 'Helpmate helps customers to skilled book labour at resonable price',
       image: `${Helpmate}`,
       techStack: ['HTML', 'CSS', 'Javascript', 'React Native', 'Expo'],
