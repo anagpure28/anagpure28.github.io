@@ -201,8 +201,26 @@ const Portfolio = () => {
     return () => observer.disconnect();
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  // Fixed scroll function
+  const scrollToSection = (sectionName) => {
+    // Convert menu item names to actual section IDs
+    const sectionMap = {
+      'Home': 'home',
+      'About me': 'about',
+      'Skills': 'skills',
+      'Projects': 'projects',
+      'Contact': 'contact'
+    };
+    
+    const sectionId = sectionMap[sectionName] || sectionName.toLowerCase();
+    const element = document.getElementById(sectionId);
+    
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
     setIsMenuOpen(false);
   };
 
@@ -385,19 +403,6 @@ const Portfolio = () => {
             </div>
             
             {/* Desktop Menu */}
-            {/* <div className="hidden md:flex space-x-8">
-              {['Home', 'About me', 'Skills', 'Projects', 'Contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className={`cursor-pointer capitalize transition-all duration-300 hover:text-blue-400 ${
-                    activeSection === item ? 'text-blue-400' : 'text-white'
-                  }`}
-                >
-                  {item}
-                </button>
-              ))}
-            </div> */}
             <div className="hidden md:flex space-x-8">
               {['Home', 'About me', 'Skills', 'Projects', 'Contact', 'Resume'].map((item) => (
                 item === 'Resume' ? (
