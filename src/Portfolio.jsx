@@ -11,6 +11,7 @@ import InterviewAuto from './assets/InterviewAuto.png';
 import NoteApplication from './assets/NoteApplication.png';
 import Helpmate from './assets/helpmate.png';
 import Fruit from './assets/Fruit.png';
+import Profile from './assets/Profile.jpg';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -442,7 +443,33 @@ const Portfolio = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-black/90 backdrop-blur-lg">
             <div className="px-4 py-2 space-y-2">
-              {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+              {['Home', 'About me', 'Skills', 'Projects', 'Contact', 'Resume'].map((item) => (
+                item === 'Resume' ? (
+                  <a
+                    key={item}
+                    href="/Aniket-Nagpure-Resume.pdf" 
+                    download="Aniket-Nagpure-Resume.pdf"
+                    className="cursor-pointer block w-full text-left py-2 capitalize hover:text-blue-400 transition-colors"
+                  >
+                    {item}
+                  </a>
+                ) : (
+                  <button
+                    key={item}
+                    onClick={() => scrollToSection(item)}
+                    className="cursor-pointer block w-full text-left py-2 capitalize hover:text-blue-400 transition-colors"
+                  >
+                    {item}
+                  </button>
+                )
+              ))}
+            </div>
+          </div>
+        )}
+        {/* {isMenuOpen && (
+          <div className="md:hidden bg-black/90 backdrop-blur-lg">
+            <div className="px-4 py-2 space-y-2">
+              {['Home', 'About me', 'Skills', 'Projects', 'Contact', 'Resume'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -453,7 +480,7 @@ const Portfolio = () => {
               ))}
             </div>
           </div>
-        )}
+        )} */}
       </nav>
 
       {/* Hero Section */}
@@ -463,7 +490,7 @@ const Portfolio = () => {
         <div className="relative z-10 text-center">
           <div className="mb-8">
             <img
-              src={p}
+              src={Profile}
               alt="Professional Photo"
               className="hero-image w-45 h-50 rounded-md mx-auto mb-6 border-4 border-blue-400 shadow-2xl will-change-transform"
             />
