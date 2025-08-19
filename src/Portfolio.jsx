@@ -490,7 +490,7 @@ const Portfolio = () => {
         <div className="relative z-10 text-center">
           <div className="mb-8">
             <img
-              src={Profile}
+              src={p}
               alt="Professional Photo"
               className="hero-image w-45 h-50 rounded-md mx-auto mb-6 border-4 border-blue-400 shadow-2xl will-change-transform"
             />
