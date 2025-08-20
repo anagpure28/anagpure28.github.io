@@ -573,7 +573,7 @@ const Portfolio = () => {
       {/* Skills Section */}
       <section id="skills" className="skills-section py-20 px-4 bg-black/20" ref={skillsRef}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 pb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Skills & Technologies
           </h2>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
@@ -607,7 +607,7 @@ const Portfolio = () => {
       {/* Projects Section */}
       <section id="projects" className="projects-section py-20 px-4" ref={projectsRef}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 pb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Featured Projects
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
