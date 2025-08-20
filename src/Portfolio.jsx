@@ -38,10 +38,17 @@ const Portfolio = () => {
       scrollTriggerScript.onload = () => {
         gsap.registerPlugin(window.ScrollTrigger);
         
-        // Set up ScrollTrigger defaults for smooth performance
+        // Enhanced GSAP config for better performance
         gsap.config({
           autoSleep: 60,
-          force3D: true
+          force3D: true,
+          nullTargetWarn: false
+        });
+        
+        // Set ScrollTrigger defaults for smoother scrolling
+        window.ScrollTrigger.config({
+          autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+          ignoreMobileResize: true
         });
         
         // Hero animations
@@ -65,7 +72,7 @@ const Portfolio = () => {
           { y: 0, opacity: 1, duration: 1, delay: 1.1, ease: 'power3.out' }
         );
 
-        // About section animations
+        // About section animations with improved performance
         gsap.fromTo('.about-text', 
           { x: -50, opacity: 0 },
           { 
@@ -75,10 +82,11 @@ const Portfolio = () => {
             ease: 'power2.out',
             scrollTrigger: {
               trigger: '.about-section',
-              start: 'top 85%',
+              start: 'top 80%',
               end: 'bottom 20%',
               toggleActions: 'play none none reverse',
-              once: true
+              once: true,
+              fastScrollEnd: true
             }
           }
         );
@@ -93,84 +101,77 @@ const Portfolio = () => {
             ease: 'power2.out',
             scrollTrigger: {
               trigger: '.about-section',
-              start: 'top 85%',
+              start: 'top 80%',
               end: 'bottom 20%',
               toggleActions: 'play none none reverse',
-              once: true
+              once: true,
+              fastScrollEnd: true
             }
           }
         );
 
-        // Skills icons animation - optimized for better performance
+        // Skills icons animation with reduced complexity
         gsap.fromTo('.skill-icon', 
-          { scale: 0, y: 30, opacity: 0 },
+          { scale: 0.8, y: 20, opacity: 0 },
           { 
             scale: 1, 
             y: 0,
             opacity: 1,
-            duration: 0.6, 
-            stagger: 0.08,
-            ease: 'back.out(1.4)',
+            duration: 0.5, 
+            stagger: 0.05,
+            ease: 'power2.out',
             scrollTrigger: {
               trigger: '.skills-section',
-              start: 'top 85%',
+              start: 'top 80%',
               end: 'bottom 20%',
               toggleActions: 'play none none reverse',
-              once: true
+              once: true,
+              fastScrollEnd: true
             }
           }
         );
 
-        // Projects animation
+        // Projects animation with better performance
         gsap.fromTo('.project-card', 
-          { y: 60, opacity: 0, scale: 0.9 },
+          { y: 40, opacity: 0 },
           { 
             y: 0, 
             opacity: 1, 
-            scale: 1,
-            duration: 0.6, 
-            stagger: 0.15,
+            duration: 0.5, 
+            stagger: 0.1,
             ease: 'power2.out',
             scrollTrigger: {
               trigger: '.projects-section',
-              start: 'top 85%',
+              start: 'top 80%',
               end: 'bottom 20%',
               toggleActions: 'play none none reverse',
-              once: true
+              once: true,
+              fastScrollEnd: true
             }
           }
         );
 
         // Contact section animation
         gsap.fromTo('.contact-item', 
-          { y: 40, opacity: 0 },
+          { y: 30, opacity: 0 },
           { 
             y: 0, 
             opacity: 1, 
-            duration: 0.6, 
-            stagger: 0.15,
+            duration: 0.5, 
+            stagger: 0.1,
             ease: 'power2.out',
             scrollTrigger: {
               trigger: '.contact-section',
-              start: 'top 85%',
+              start: 'top 80%',
               end: 'bottom 20%',
               toggleActions: 'play none none reverse',
-              once: true
+              once: true,
+              fastScrollEnd: true
             }
           }
         );
 
-        // Subtle parallax effect for background - reduced intensity for better performance
-        gsap.to('.bg-parallax', {
-          yPercent: -20,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: '.bg-parallax',
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 1
-          }
-        });
+        // Removed parallax effect that can cause white flashes
       };
       document.head.appendChild(scrollTriggerScript);
     };
@@ -183,7 +184,7 @@ const Portfolio = () => {
     };
   }, []);
 
-  // Intersection Observer for active section tracking
+  // Optimized Intersection Observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -193,7 +194,10 @@ const Portfolio = () => {
           }
         });
       },
-      { threshold: 0.6 }
+      { 
+        threshold: 0.5,
+        rootMargin: '-10% 0px -10% 0px'
+      }
     );
 
     const sections = document.querySelectorAll('section[id]');
@@ -387,9 +391,9 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white overflow-x-hidden" style={{ scrollBehavior: 'smooth' }}>
-      {/* Parallax Background */}
-      <div className="fixed inset-0 bg-parallax opacity-10 will-change-transform">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white overflow-x-hidden" style={{ scrollBehavior: 'smooth', backfaceVisibility: 'hidden' }}>
+      {/* Simplified Background - removed parallax to prevent white flashes */}
+      <div className="fixed inset-0 opacity-5">
         <div className="absolute inset-0 bg-repeat" style={{
           backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"
         }}></div>
@@ -466,42 +470,26 @@ const Portfolio = () => {
             </div>
           </div>
         )}
-        {/* {isMenuOpen && (
-          <div className="md:hidden bg-black/90 backdrop-blur-lg">
-            <div className="px-4 py-2 space-y-2">
-              {['Home', 'About me', 'Skills', 'Projects', 'Contact', 'Resume'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className="cursor-pointer block w-full text-left py-2 capitalize hover:text-blue-400 transition-colors"
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
-          </div>
-        )} */}
       </nav>
 
       {/* Hero Section */}
-      {/* <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden"> */}
-        <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-0">
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-0" style={{ transform: 'translateZ(0)' }}>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative z-10 text-center">
           <div className="mb-8">
             <img
               src={p}
               alt="Professional Photo"
-              className="hero-image w-45 h-50 rounded-md mx-auto mb-6 border-4 border-blue-400 shadow-2xl will-change-transform"
+              className="hero-image w-45 h-50 rounded-md mx-auto mb-6 border-4 border-blue-400 shadow-2xl"
             />
           </div>
-          <h1 className="hero-title text-5xl md:text-7xl font-bold mb-6 pb-3 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent will-change-transform">
+          <h1 className="hero-title text-5xl md:text-7xl font-bold mb-6 pb-3 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Aniket Nagpure
           </h1>
-          <p className="hero-subtitle text-xl md:text-2xl mb-8 text-gray-300 will-change-transform">
+          <p className="hero-subtitle text-xl md:text-2xl mb-8 text-gray-300">
             MERN Stack Developer | Building Digital Experiences
           </p>
-          <div className="hero-buttons flex flex-col sm:flex-row gap-4 pt-6 justify-center will-change-transform">
+          <div className="hero-buttons flex flex-col sm:flex-row gap-4 pt-6 justify-center">
             <button
               onClick={() => scrollToSection('projects')}
               className="cursor-pointer px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
@@ -522,13 +510,13 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="about-section py-20 px-4" ref={aboutRef}>
+      <section id="about" className="about-section py-20 px-4" ref={aboutRef} style={{ transform: 'translateZ(0)' }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             About Me
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="about-text space-y-6 will-change-transform">
+            <div className="about-text space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
                 I'm a passionate MERN Stack Developer with 2.7 years of experience building scalable web applications. 
                 I specialize in creating seamless user experiences with modern technologies and best practices.
@@ -543,7 +531,7 @@ const Portfolio = () => {
                 or sharing my knowledge with the developer community.
               </p>
             </div>
-            <div className="about-card will-change-transform">
+            <div className="about-card">
               <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
                 <h3 className="text-2xl font-semibold mb-6 text-blue-400">Quick Facts</h3>
                 <ul className="space-y-4">
@@ -571,7 +559,7 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="skills-section py-20 px-4 bg-black/20" ref={skillsRef}>
+      <section id="skills" className="skills-section py-20 px-4 bg-black/20" ref={skillsRef} style={{ transform: 'translateZ(0)' }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 pb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Skills & Technologies
@@ -580,7 +568,7 @@ const Portfolio = () => {
             {skillIcons.map((skill, index) => (
               <div
                 key={skill.name}
-                className="skill-icon flex flex-col items-center group cursor-pointer will-change-transform"
+                className="skill-icon flex flex-col items-center group cursor-pointer"
               >
                 <div className="relative">
                   <div className={`w-20 h-20 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/10 group-hover:border-blue-400/50 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue-500/25 ${skill.color}`}>
@@ -605,7 +593,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="projects-section py-20 px-4" ref={projectsRef}>
+      <section id="projects" className="projects-section py-20 px-4" ref={projectsRef} style={{ transform: 'translateZ(0)' }}>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 pb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Featured Projects
@@ -614,7 +602,7 @@ const Portfolio = () => {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="project-card bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl overflow-hidden backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 group will-change-transform"
+                className="project-card bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl overflow-hidden backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 group"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -665,7 +653,7 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="contact-section py-20 px-4 bg-black/20" ref={contactRef}>
+      <section id="contact" className="contact-section py-20 px-4 bg-black/20" ref={contactRef} style={{ transform: 'translateZ(0)' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Let's Connect
@@ -678,11 +666,10 @@ const Portfolio = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <a
               href="mailto:your.email@example.com"
-              className="contact-item flex flex-col items-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-xl backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 will-change-transform"
+              className="contact-item flex flex-col items-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-xl backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
             >
               <Mail size={32} className="text-blue-400 mb-4" />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
-              {/* <p className="text-gray-300 text-sm">aniketnagpureofficial@gmail.com</p> */}
               <p className="text-gray-300 text-sm">
                 <a href="mailto:aniketnagpureofficial@gmail.com">
                     aniketnagpureofficial@gmail.com
@@ -692,14 +679,14 @@ const Portfolio = () => {
             
             <a
               href="tel:+919209216409"
-              className="contact-item flex flex-col items-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-xl backdrop-blur-sm border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 will-change-transform"
+              className="contact-item flex flex-col items-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-xl backdrop-blur-sm border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
             >
               <Phone size={32} className="text-purple-400 mb-4" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
               <p className="text-gray-300 text-sm">+91 9209216409</p>
             </a>
             
-            <div className="contact-item flex flex-col items-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-xl backdrop-blur-sm border border-white/10 will-change-transform">
+            <div className="contact-item flex flex-col items-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-xl backdrop-blur-sm border border-white/10">
               <div className="flex gap-4 mb-4">
                 <a
                   href="https://www.linkedin.com/in/aniket-nagpure-03aa711b7/"
@@ -723,7 +710,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <div className="contact-item bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10 will-change-transform">
+          <div className="contact-item bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
             <h3 className="text-2xl font-semibold mb-6">Ready to start a project?</h3>
             <p className="text-gray-300 mb-6">
               I'm currently available for new opportunities and would love to discuss your next project.
@@ -739,7 +726,7 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-white/10">
+      <footer className="py-8 px-4 border-t border-white/10" style={{ transform: 'translateZ(0)' }}>
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-400">
             © 2025 Aniket Nagpure. All rights reserved. Built with React and lots of ☕
