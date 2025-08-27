@@ -390,6 +390,23 @@ const Portfolio = () => {
     },
   ];
 
+
+  // Add this function before your component or inside your component
+const handleResumeClick = (e) => {
+  e.preventDefault();
+  
+  // Open in new tab
+  window.open('/Aniket-Nagpure-Resume.pdf', '_blank');
+  
+  // Download the file
+  const link = document.createElement('a');
+  link.href = '/Aniket-Nagpure-Resume.pdf';
+  link.download = 'Aniket-Nagpure-Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white overflow-x-hidden" style={{ scrollBehavior: 'smooth', backfaceVisibility: 'hidden' }}>
       {/* Simplified Background - removed parallax to prevent white flashes */}
@@ -399,48 +416,47 @@ const Portfolio = () => {
         }}></div>
       </div>
 
-      {/* Navigation */}
+      {/* Navigation Desktop and Mobile */}
       <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-lg z-50 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Aniket Nagpure
-            </div>
-            
-            {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
-              {['Home', 'About me', 'Skills', 'Projects', 'Contact', 'Resume'].map((item) => (
-                item === 'Resume' ? (
-                  <a
-                    key={item}
-                    href="/Aniket-Nagpure-Resume.pdf" 
-                    download="Aniket-Nagpure-Resume.pdf"
-                    className="cursor-pointer capitalize transition-all duration-300 hover:text-blue-400 text-white"
-                  >
-                    {item}
-                  </a>
-                ) : (
-                  <button
-                    key={item}
-                    onClick={() => scrollToSection(item)}
-                    className={`cursor-pointer capitalize transition-all duration-300 hover:text-blue-400 ${
-                      activeSection === item ? 'text-blue-400' : 'text-white'
-                    }`}
-                  >
-                    {item}
-                  </button>
-                )
-              ))}
-            </div>
-
-            {/* Mobile Menu Button */}
+    <div className="flex justify-between items-center py-4">
+      <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Aniket Nagpure
+      </div>
+      
+      {/* Desktop Menu */}
+      <div className="hidden md:flex space-x-8">
+        {['Home', 'About me', 'Skills', 'Projects', 'Contact', 'Resume'].map((item) => (
+          item === 'Resume' ? (
             <button
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              key={item}
+              onClick={handleResumeClick}
+              className="cursor-pointer capitalize transition-all duration-300 hover:text-blue-400 text-white"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {item}
             </button>
-          </div>
+          ) : (
+            <button
+              key={item}
+              onClick={() => scrollToSection(item)}
+              className={`cursor-pointer capitalize transition-all duration-300 hover:text-blue-400 ${
+                activeSection === item ? 'text-blue-400' : 'text-white'
+              }`}
+            >
+              {item}
+            </button>
+          )
+        ))}
+      </div>
+
+      {/* Mobile Menu Button */}
+      <button
+        className="md:hidden"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+    </div>
         </div>
 
         {/* Mobile Menu */}
@@ -449,14 +465,13 @@ const Portfolio = () => {
             <div className="px-4 py-2 space-y-2">
               {['Home', 'About me', 'Skills', 'Projects', 'Contact', 'Resume'].map((item) => (
                 item === 'Resume' ? (
-                  <a
+                  <button
                     key={item}
-                    href="/Aniket-Nagpure-Resume.pdf" 
-                    download="Aniket-Nagpure-Resume.pdf"
+                    onClick={handleResumeClick}
                     className="cursor-pointer block w-full text-left py-2 capitalize hover:text-blue-400 transition-colors"
                   >
                     {item}
-                  </a>
+                  </button>
                 ) : (
                   <button
                     key={item}
